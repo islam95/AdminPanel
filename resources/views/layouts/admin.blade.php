@@ -83,10 +83,10 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> Users<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/users">All users</a>
+                                <a href="{{ route('users.index') }}">All users</a>
                             </li>
                             <li>
-                                <a href="/users/create">Create user</a>
+                                <a href="{{ route('users.create') }}">Create user</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
@@ -123,19 +123,6 @@
                             </li>
                             <li>
                                 <a href="">Upload media</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-                    <li class="active">
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a class="active" href="blank.html">Blank Page</a>
-                            </li>
-                            <li>
-                                <a href="login.html">Login Page</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
