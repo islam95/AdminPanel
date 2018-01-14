@@ -3,7 +3,7 @@
 
 @section('content')
 
-<h2 class="page-header">Create users</h2>
+<h2 class="page-header">Create user</h2>
 
 {!! Form::open(['method' => 'POST', 'action' => 'AdminUsersController@store', 'files' => 'true']) !!}
 

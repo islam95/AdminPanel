@@ -19,7 +19,6 @@ class AdminPostsController extends Controller
     public function index()
     {
         $posts = Post::all();
-
         return view('admin.posts.index', compact('posts'));
     }
 
@@ -31,7 +30,6 @@ class AdminPostsController extends Controller
     public function create()
     {
         $categories = Category::pluck('name', 'id')->all();
-
         return view('admin.posts.create', compact('categories'));
     }
 
@@ -56,9 +54,7 @@ class AdminPostsController extends Controller
         }
 
         $user->post()->create($input);
-
         return redirect('admin/posts');
-
     }
 
     /**

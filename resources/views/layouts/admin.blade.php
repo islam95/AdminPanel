@@ -14,6 +14,7 @@
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
+    @yield('styles')
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -89,7 +90,7 @@
                         <a href="/admin"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> Users<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-users fa-fw"></i> Users<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="{{ route('users.index') }}">All users</a>
@@ -101,7 +102,7 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i> Posts<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="{{ route('posts.index') }}">All posts</a>
@@ -113,25 +114,22 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> Categories<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-tags fa-fw" aria-hidden="true"></i> Categories<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="{{ route('categories.index') }}">All categories</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('categories.create') }}">Create category</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-wretch fa-fw"></i> Media<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-picture-o fa-fw" aria-hidden="true"></i> Pictures<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/media">All media</a>
+                                <a href="{{ route('photos.index') }}">All pictures</a>
                             </li>
                             <li>
-                                <a href="">Upload media</a>
+                                <a href="{{ route('photos.create') }}">Upload picture</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
@@ -143,28 +141,6 @@
         </div>
         <!-- /.navbar-static-side -->
     </nav>
-
-    <div class="navbar-default sidebar" role="navigation">
-        <div class="sidebar-nav navbar-collapse">
-            <ul class="nav" id="side-menu">
-                <li>
-                    <a href="/profile"><i class="fa fa-dashboard fa-fw"></i> Profile</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="">All posts</a>
-                        </li>
-                        <li>
-                            <a href="">Create post</a>
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-            </ul>
-        </div>
-    </div>
 
     <!-- Page Content -->
     <div id="page-wrapper">
@@ -188,7 +164,7 @@
 <!-- Scripts -->
 <script src="{{ asset('js/all.js') }}"></script>
 
-@yield('footer')
+@yield('scripts')
 
 </body>
 
